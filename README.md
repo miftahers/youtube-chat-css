@@ -1,6 +1,14 @@
 # Youtube Chat only CSS
 This repository is trying to explain basic youtube chat style manipulation only using css.
 
+## Cara Menggunakan contoh:
+  1. Buka halaman file.
+  2. klik raw
+     ![image](https://github.com/miftahers/youtube-chat-css/assets/82572402/ec774c40-079c-4685-b712-648ad216d929)
+  3. Copy semua tulisan
+  4. Tempel di OBS
+
+
 ## ENGLISH
 
 ### Font Imports
