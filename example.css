@@ -1,99 +1,97 @@
-/* Import Font */
 @import url("https://fonts.googleapis.com/css?family=Baloo");
 @import url("https://fonts.googleapis.com/css?family=Baloo Da");
 
-/* Ganti warna latar belakang dan font pada elemen body */
+/* Background colors*/
 body {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0,0,0,0);
 }
-
-/* Atur latar belakang pesan live chat menjadi transparan */
+/* Transparent background. */
 yt-live-chat-renderer {
   background-color: transparent !important;
 }
-
-/* Tambahkan garis samping pada pesan teks live chat */
-yt-live-chat-text-message-renderer::after {
-  border: 2px solid rgba(204, 204, 204, 1);
-  content: "";
-  position: absolute;
-  display: block;
-  left: 8px;
-  top: 4px;
-  bottom: 4px;
-  width: 1px;
-  box-sizing: border-box;
-  border-radius: 2px;
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: rgba(204,204,204,1) !important;
 }
 
-/* Warna garis berbeda untuk pemilik, moderator, dan anggota */
-yt-live-chat-text-message-renderer[author-type="owner"]::after {
-  /* Garis untuk pemilik (owner) */
-  border: 2px solid rgba(255, 214, 0, 1);
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background-color: rgba(255,214,0,1) !important;
 }
 
-yt-live-chat-text-message-renderer[author-type="moderator"]::after {
-  /* Garis untuk moderator */
-  border: 2px solid rgba(94, 132, 241, 1);
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background-color: rgba(94,132,241,1) !important;
 }
 
-yt-live-chat-text-message-renderer[author-type="member"]::after {
-  /* Garis untuk anggota (member) */
-  border: 2px solid rgba(15, 157, 88, 1);
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background-color: rgba(15,157,88,1) !important;
 }
 
-/* Atur tampilan nama pengirim */
+
 yt-live-chat-author-chip #author-name {
   background-color: transparent !important;
 }
-
-/* Berikan efek bayangan pada teks dalam pesan live chat */
+/* Outlines */
 yt-live-chat-renderer * {
-  text-shadow: -1px -1px #000000, -1px 0px #000000, -1px 1px #000000, 0px -1px #000000, 0px 0px #000000, 0px 1px #000000, 1px -1px #000000, 1px 0px #000000, 1px 1px #000000;
+  text-shadow: -1px -1px #000000,-1px 0px #000000,-1px 1px #000000,0px -1px #000000,0px 0px #000000,0px 1px #000000,1px -1px #000000,1px 0px #000000,1px 1px #000000;
   font-family: "Baloo";
   font-size: 18px !important;
   line-height: normal !important;
 }
 
-/* Hilangkan scrollbar pada kotak pesan */
-yt-live-chat-item-list-renderer #items {
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-legacy-paid-message-renderer #content {
+  overflow: initial !important;
+}
+
+/* Hide scrollbar. */
+yt-live-chat-item-list-renderer #items{
   overflow: hidden !important;
 }
 
-yt-live-chat-item-list-renderer #item-scroller {
+yt-live-chat-item-list-renderer #item-scroller{
   overflow: hidden !important;
 }
 
-/* Sembunyikan header dan input pesan */
+/* Hide header and input. */
 yt-live-chat-header-renderer,
 yt-live-chat-message-input-renderer {
   display: none !important;
 }
 
-/* Kurangi padding samping pada pesan teks dan pesan berbayar */
+/* Reduce side padding. */
 yt-live-chat-text-message-renderer,
 yt-live-chat-legacy-paid-message-renderer {
-  padding-left: 20px !important;
+    padding-left: 4px !important;
   padding-right: 4px !important;
 }
 
-/* Atur tampilan foto avatar pengirim */
+yt-live-chat-paid-message-renderer #header {
+    padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* Avatars. */
 yt-live-chat-text-message-renderer #author-photo,
 yt-live-chat-paid-message-renderer #author-photo,
 yt-live-chat-legacy-paid-message-renderer #author-photo {
+  
   width: 24px !important;
   height: 24px !important;
   border-radius: 24px !important;
   margin-right: 6px !important;
 }
 
-/* Sembunyikan lencana pengirim (badges) */
+/* Hide badges. */
 yt-live-chat-text-message-renderer #author-badges {
+  
   vertical-align: text-top !important;
 }
 
-/* Atur tampilan timestamp (waktu) pesan */
+/* Timestamps. */
 yt-live-chat-text-message-renderer #timestamp {
   display: inline !important;
   color: #ffffff !important;
@@ -102,7 +100,7 @@ yt-live-chat-text-message-renderer #timestamp {
   line-height: 16px !important;
 }
 
-/* Warna teks nama pengirim berdasarkan peran (owner, moderator, member) */
+/* Badges. */
 yt-live-chat-text-message-renderer #author-name[type="owner"],
 yt-live-chat-text-message-renderer #author-name.owner,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
@@ -121,7 +119,7 @@ yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="memb
   color: #0f9d58 !important;
 }
 
-/* Warna teks nama channel pengirim */
+/* Channel names. */
 yt-live-chat-text-message-renderer #author-name {
   color: #cccccc !important;
   font-family: "Baloo";
@@ -129,13 +127,12 @@ yt-live-chat-text-message-renderer #author-name {
   line-height: 20px !important;
 }
 
-/* Tambahkan titik dua setelah nama pengirim */
 yt-live-chat-text-message-renderer #author-name::after {
   content: ":";
   margin-left: 1px;
 }
 
-/* Atur tampilan teks pesan */
+/* Messages. */
 yt-live-chat-text-message-renderer #message,
 yt-live-chat-text-message-renderer #message * {
   color: #ffffff !important;
@@ -145,7 +142,8 @@ yt-live-chat-text-message-renderer #message * {
   letter-spacing: normal !important;
 }
 
-/* Atur tampilan pesan SuperChat/Fan Funding */
+
+/* SuperChat/Fan Funding Messages. */
 yt-live-chat-paid-message-renderer #author-name,
 yt-live-chat-paid-message-renderer #author-name *,
 yt-live-chat-legacy-paid-message-renderer #event-text,
@@ -174,12 +172,10 @@ yt-live-chat-paid-message-renderer #content * {
   line-height: 18px !important;
 }
 
-/* Sembunyikan pesan moderasi */
 yt-live-chat-moderation-message-renderer {
   display: none !important;
 }
 
-/* Atur margin pada pesan berbayar */
 yt-live-chat-paid-message-renderer {
   margin: 4px 0 !important;
 }
@@ -189,25 +185,22 @@ yt-live-chat-legacy-paid-message-renderer {
   margin: 4px 0 !important;
 }
 
-/* Hilangkan tautan (links) dalam pesan */
 yt-live-chat-text-message-renderer a,
 yt-live-chat-legacy-paid-message-renderer a {
   text-decoration: none !important;
 }
 
-/* Sembunyikan pesan yang telah dihapus */
 yt-live-chat-text-message-renderer[is-deleted],
 yt-live-chat-legacy-paid-message-renderer[is-deleted] {
   display: none !important;
 }
 
-/* Atur tampilan pesan ticker */
 yt-live-chat-ticker-renderer {
   background-color: transparent !important;
   box-shadow: none !important;
 }
 
-/* Atur tampilan teks dalam pesan ticker */
+
 yt-live-chat-ticker-paid-message-item-renderer,
 yt-live-chat-ticker-paid-message-item-renderer *,
 yt-live-chat-ticker-sponsor-item-renderer,
@@ -216,43 +209,36 @@ yt-live-chat-ticker-sponsor-item-renderer * {
   font-family: "Baloo";
 }
 
-/* Sembunyikan panel aksi dan reaksi */
-yt-live-chat-action-panel-renderer,
-yt-live-chat-renderer #action-panel {
+yt-live-chat-mode-change-message-renderer, 
+yt-live-chat-viewer-engagement-message-renderer, 
+yt-live-chat-restricted-participation-renderer {
   display: none !important;
 }
 
-/* Sembunyikan panel kontrol reaksi */
-yt-reaction-control-panel-overlay,
-yt-reaction-control-panel-overlay-view-model,
-yt-reaction-control-panel-view-model {
-  display: none !important;
-}
-
-/* Sembunyikan pesan viewer engagement */
-yt-live-chat-viewer-engagement-message-renderer {
-  display: none !important;
-}
-
-/* Sembunyikan banner manager */
 yt-live-chat-banner-manager {
   display: none !important;
 }
-
-/* Animasi masuk untuk pesan teks */
 @keyframes anim {
-  0% {
-    opacity: 0;
-    transform: translateX(16px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+0% { opacity: 0; transform: translateX(16px); }
+100% { opacity: 1; transform: none;}
 }
 
 yt-live-chat-text-message-renderer,
 yt-live-chat-legacy-paid-message-renderer {
   animation: anim 600ms;
   animation-fill-mode: forwards;
+}
+
+
+yt-live-chat-action-panel-renderer, 
+yt-live-chat-renderer #action-panel {
+  display: none !important;
+}
+yt-reaction-control-panel-overlay,
+yt-reaction-control-panel-overlay-view-model,
+yt-reaction-control-panel-view-model {
+  display: none !important;
+}
+yt-live-chat-viewer-engagement-message-renderer {
+  display: none !important;
 }
