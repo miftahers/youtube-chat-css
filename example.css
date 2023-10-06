@@ -12,22 +12,22 @@ yt-live-chat-renderer {
 }
 yt-live-chat-text-message-renderer,
 yt-live-chat-text-message-renderer[is-highlighted] {
-  background-color: transparent !important;
+  background-color: rgba(204,204,204,1) !important;
 }
 
 yt-live-chat-text-message-renderer[author-type="owner"],
 yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
-  background-color: transparent !important;
+  background-color: rgba(255,214,0,1) !important;
 }
 
 yt-live-chat-text-message-renderer[author-type="moderator"],
 yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
-  background-color: transparent !important;
+  background-color: rgba(94,132,241,1) !important;
 }
 
 yt-live-chat-text-message-renderer[author-type="member"],
 yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
-  background-color: transparent !important;
+  background-color: rgba(15,157,88,1) !important;
 }
 
 
@@ -220,6 +220,16 @@ yt-live-chat-restricted-participation-renderer {
 
 yt-live-chat-banner-manager {
   display: none !important;
+}
+@keyframes anim {
+0% { opacity: 0; transform: translateX(16px); }
+100% { opacity: 1; transform: none;}
+}
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-legacy-paid-message-renderer {
+  animation: anim 600ms;
+  animation-fill-mode: forwards;
 }
 
 
