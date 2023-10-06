@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Changa One");
-@import url("https://fonts.googleapis.com/css?family=Imprima");
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+@import url("https://fonts.googleapis.com/css?family=Baloo Da");
 
 /* Background colors*/
 body {
@@ -10,24 +10,56 @@ body {
 yt-live-chat-renderer {
   background-color: transparent !important;
 }
-yt-live-chat-text-message-renderer,
-yt-live-chat-text-message-renderer[is-highlighted] {
-  background-color: rgba(204,204,204,1) !important;
+yt-live-chat-text-message-renderer::after {
+  border: 2px solid rgba(204,204,204,1);
+  content: "";
+  position: absolute;
+  display: block;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
-yt-live-chat-text-message-renderer[author-type="owner"],
-yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
-  background-color: rgba(255,214,0,1) !important;
+yt-live-chat-text-message-renderer[author-type="owner"]::after {
+  border: 2px solid rgba(255,214,0,1);
+  content: "";
+  position: absolute;
+  display: block;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
-yt-live-chat-text-message-renderer[author-type="moderator"],
-yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
-  background-color: rgba(94,132,241,1) !important;
+yt-live-chat-text-message-renderer[author-type="moderator"]::after {
+  border: 2px solid rgba(94,132,241,1);
+  content: "";
+  position: absolute;
+  display: block;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
-yt-live-chat-text-message-renderer[author-type="member"],
-yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
-  background-color: rgba(15,157,88,1) !important;
+yt-live-chat-text-message-renderer[author-type="member"]::after {
+  border: 2px solid rgba(15,157,88,1);
+  content: "";
+  position: absolute;
+  display: block;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
 
@@ -36,8 +68,8 @@ yt-live-chat-author-chip #author-name {
 }
 /* Outlines */
 yt-live-chat-renderer * {
-  text-shadow: -2px -2px #000000,-2px -1px #000000,-2px 0px #000000,-2px 1px #000000,-2px 2px #000000,-1px -2px #000000,-1px -1px #000000,-1px 0px #000000,-1px 1px #000000,-1px 2px #000000,0px -2px #000000,0px -1px #000000,0px 0px #000000,0px 1px #000000,0px 2px #000000,1px -2px #000000,1px -1px #000000,1px 0px #000000,1px 1px #000000,1px 2px #000000,2px -2px #000000,2px -1px #000000,2px 0px #000000,2px 1px #000000,2px 2px #000000;
-  font-family: "Imprima";
+  text-shadow: -1px -1px #000000,-1px 0px #000000,-1px 1px #000000,0px -1px #000000,0px 0px #000000,0px 1px #000000,1px -1px #000000,1px 0px #000000,1px 1px #000000;
+  font-family: "Baloo";
   font-size: 18px !important;
   line-height: normal !important;
 }
@@ -65,12 +97,12 @@ yt-live-chat-message-input-renderer {
 /* Reduce side padding. */
 yt-live-chat-text-message-renderer,
 yt-live-chat-legacy-paid-message-renderer {
-    padding-left: 4px !important;
+    padding-left: 20px !important;
   padding-right: 4px !important;
 }
 
 yt-live-chat-paid-message-renderer #header {
-    padding-left: 4px !important;
+    padding-left: 20px !important;
   padding-right: 4px !important;
 }
 
@@ -87,15 +119,15 @@ yt-live-chat-legacy-paid-message-renderer #author-photo {
 
 /* Hide badges. */
 yt-live-chat-text-message-renderer #author-badges {
-  display: none !important;
+  
   vertical-align: text-top !important;
 }
 
 /* Timestamps. */
 yt-live-chat-text-message-renderer #timestamp {
-  
-  color: #999999 !important;
-  font-family: "Imprima";
+  display: inline !important;
+  color: #ffffff !important;
+  font-family: "Baloo Da";
   font-size: 16px !important;
   line-height: 16px !important;
 }
@@ -122,21 +154,21 @@ yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="memb
 /* Channel names. */
 yt-live-chat-text-message-renderer #author-name {
   color: #cccccc !important;
-  font-family: "Changa One";
+  font-family: "Baloo";
   font-size: 20px !important;
   line-height: 20px !important;
 }
 
 yt-live-chat-text-message-renderer #author-name::after {
   content: ":";
-  margin-left: 2px;
+  margin-left: 1px;
 }
 
 /* Messages. */
 yt-live-chat-text-message-renderer #message,
 yt-live-chat-text-message-renderer #message * {
   color: #ffffff !important;
-  font-family: "Imprima";
+  font-family: "Baloo";
   font-size: 18px !important;
   line-height: normal !important;
   letter-spacing: normal !important;
@@ -149,7 +181,7 @@ yt-live-chat-paid-message-renderer #author-name *,
 yt-live-chat-legacy-paid-message-renderer #event-text,
 yt-live-chat-legacy-paid-message-renderer #event-text * {
   color: #ffffff !important;
-  font-family: "Changa One";
+  font-family: "Baloo";
   font-size: 20px !important;
   line-height: 20px !important;
 }
@@ -159,7 +191,7 @@ yt-live-chat-paid-message-renderer #purchase-amount *,
 yt-live-chat-legacy-paid-message-renderer #detail-text,
 yt-live-chat-legacy-paid-message-renderer #detail-text * {
   color: #ffffff !important;
-  font-family: "Imprima";
+  font-family: "Baloo";
   font-size: 18px !important;
   line-height: 18px !important;
 }
@@ -167,7 +199,7 @@ yt-live-chat-legacy-paid-message-renderer #detail-text * {
 yt-live-chat-paid-message-renderer #content,
 yt-live-chat-paid-message-renderer #content * {
   color: #ffffff !important;
-  font-family: "Imprima";
+  font-family: "Baloo";
   font-size: 18px !important;
   line-height: 18px !important;
 }
@@ -199,9 +231,6 @@ yt-live-chat-ticker-renderer {
   background-color: transparent !important;
   box-shadow: none !important;
 }
-yt-live-chat-ticker-renderer {
-  display: none !important;
-}
 
 
 yt-live-chat-ticker-paid-message-item-renderer,
@@ -209,7 +238,7 @@ yt-live-chat-ticker-paid-message-item-renderer *,
 yt-live-chat-ticker-sponsor-item-renderer,
 yt-live-chat-ticker-sponsor-item-renderer * {
   color: #ffffff !important;
-  font-family: "Imprima";
+  font-family: "Baloo";
 }
 
 yt-live-chat-mode-change-message-renderer, 
