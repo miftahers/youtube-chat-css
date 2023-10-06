@@ -1,60 +1,53 @@
-/* Import Font */
 @import url("https://fonts.googleapis.com/css?family=Baloo");
-@import url("https://fonts.googleapis.com/css?family=Baloo Da");
+@import url("https://fonts.googleapis.com/css?family=Buda");
 
-/* Latar Belakang */
+/* Background colors*/
 body {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0,0,0,1);
 }
-
-/* Latar Belakang Transparan pada Chat */
+/* Transparent background. */
 yt-live-chat-renderer {
   background-color: transparent !important;
 }
-
-/* Warna Latar Belakang Pesan Teks */
 yt-live-chat-text-message-renderer,
 yt-live-chat-text-message-renderer[is-highlighted] {
-  background-color: rgba(204, 204, 204, 1) !important;
+  background-color: rgba(204,204,204,1) !important;
 }
 
-/* Warna Latar Belakang Pesan Teks untuk Pemilik, Moderator, dan Anggota */
 yt-live-chat-text-message-renderer[author-type="owner"],
 yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
-  background-color: rgba(255, 214, 0, 1) !important;
+  background-color: rgba(255,214,0,1) !important;
 }
 
 yt-live-chat-text-message-renderer[author-type="moderator"],
 yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
-  background-color: rgba(94, 132, 241, 1) !important;
+  background-color: rgba(94,132,241,1) !important;
 }
 
 yt-live-chat-text-message-renderer[author-type="member"],
 yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
-  background-color: rgba(15, 157, 88, 1) !important;
+  background-color: rgba(15,157,88,1) !important;
 }
 
-/* Gaya Nama Pengirim */
+
 yt-live-chat-author-chip #author-name {
   background-color: transparent !important;
 }
-
-/* Efek Bayangan Teks */
+/* Outlines */
 yt-live-chat-renderer * {
-  text-shadow: -1px -1px #000000, -1px 0px #000000, -1px 1px #000000, 0px -1px #000000, 0px 0px #000000, 0px 1px #000000, 1px -1px #000000, 1px 0px #000000, 1px 1px #000000;
+  text-shadow: -2px -2px #000000,-2px -1px #000000,-2px 0px #000000,-2px 1px #000000,-2px 2px #000000,-1px -2px #000000,-1px -1px #000000,-1px 0px #000000,-1px 1px #000000,-1px 2px #000000,0px -2px #000000,0px -1px #000000,0px 0px #000000,0px 1px #000000,0px 2px #000000,1px -2px #000000,1px -1px #000000,1px 0px #000000,1px 1px #000000,1px 2px #000000,2px -2px #000000,2px -1px #000000,2px 0px #000000,2px 1px #000000,2px 2px #000000;
   font-family: "Baloo";
   font-size: 18px !important;
   line-height: normal !important;
 }
 
-/* Overflow Konten Pesan Teks */
 yt-live-chat-text-message-renderer #content,
 yt-live-chat-legacy-paid-message-renderer #content {
   overflow: initial !important;
 }
 
-/* Sembunyikan Scrollbar */
+/* Hide scrollbar. */
 yt-live-chat-item-list-renderer #items{
   overflow: hidden !important;
 }
@@ -63,13 +56,13 @@ yt-live-chat-item-list-renderer #item-scroller{
   overflow: hidden !important;
 }
 
-/* Sembunyikan Header dan Input Chat */
+/* Hide header and input. */
 yt-live-chat-header-renderer,
 yt-live-chat-message-input-renderer {
   display: none !important;
 }
 
-/* Padding Samping yang Dikurangi */
+/* Reduce side padding. */
 yt-live-chat-text-message-renderer,
 yt-live-chat-legacy-paid-message-renderer {
     padding-left: 4px !important;
@@ -81,7 +74,7 @@ yt-live-chat-paid-message-renderer #header {
   padding-right: 4px !important;
 }
 
-/* Gaya Avatar Pengirim */
+/* Avatars. */
 yt-live-chat-text-message-renderer #author-photo,
 yt-live-chat-paid-message-renderer #author-photo,
 yt-live-chat-legacy-paid-message-renderer #author-photo {
@@ -92,21 +85,22 @@ yt-live-chat-legacy-paid-message-renderer #author-photo {
   margin-right: 6px !important;
 }
 
-/* Sembunyikan Lencana Pengirim */
+/* Hide badges. */
 yt-live-chat-text-message-renderer #author-badges {
+  
   vertical-align: text-top !important;
 }
 
-/* Gaya Timestamp (Waktu) */
+/* Timestamps. */
 yt-live-chat-text-message-renderer #timestamp {
   display: inline !important;
-  color: #ffffff !important;
-  font-family: "Baloo Da";
+  color: #999999 !important;
+  font-family: "Buda";
   font-size: 16px !important;
   line-height: 16px !important;
 }
 
-/* Gaya Lencana (Badge) Pengirim Berdasarkan Peran */
+/* Badges. */
 yt-live-chat-text-message-renderer #author-name[type="owner"],
 yt-live-chat-text-message-renderer #author-name.owner,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
@@ -125,7 +119,7 @@ yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="memb
   color: #0f9d58 !important;
 }
 
-/* Gaya Nama Channel Pengirim */
+/* Channel names. */
 yt-live-chat-text-message-renderer #author-name {
   color: #cccccc !important;
   font-family: "Baloo";
@@ -135,10 +129,10 @@ yt-live-chat-text-message-renderer #author-name {
 
 yt-live-chat-text-message-renderer #author-name::after {
   content: ":";
-  margin-left: 1px;
+  margin-left: 2px;
 }
 
-/* Gaya Pesan Teks */
+/* Messages. */
 yt-live-chat-text-message-renderer #message,
 yt-live-chat-text-message-renderer #message * {
   color: #ffffff !important;
@@ -152,7 +146,7 @@ yt-live-chat-text-message-renderer #message {
   display: block !important;
 }
 
-/* Gaya Pesan SuperChat/Fan Funding */
+/* SuperChat/Fan Funding Messages. */
 yt-live-chat-paid-message-renderer #author-name,
 yt-live-chat-paid-message-renderer #author-name *,
 yt-live-chat-legacy-paid-message-renderer #event-text,
@@ -181,12 +175,10 @@ yt-live-chat-paid-message-renderer #content * {
   line-height: 18px !important;
 }
 
-/* Sembunyikan Pesan Moderasi */
 yt-live-chat-moderation-message-renderer {
   display: none !important;
 }
 
-/* Margin pada Pesan Berbayar */
 yt-live-chat-paid-message-renderer {
   margin: 4px 0 !important;
 }
@@ -196,25 +188,22 @@ yt-live-chat-legacy-paid-message-renderer {
   margin: 4px 0 !important;
 }
 
-/* Sembunyikan Tautan (Links) dalam Pesan */
 yt-live-chat-text-message-renderer a,
 yt-live-chat-legacy-paid-message-renderer a {
   text-decoration: none !important;
 }
 
-/* Sembunyikan Pesan yang Telah Dihapus */
 yt-live-chat-text-message-renderer[is-deleted],
 yt-live-chat-legacy-paid-message-renderer[is-deleted] {
   display: none !important;
 }
 
-/* Gaya Tampilan Pesan Ticker */
 yt-live-chat-ticker-renderer {
   background-color: transparent !important;
   box-shadow: none !important;
 }
 
-/* Gaya Teks dalam Pesan Ticker */
+
 yt-live-chat-ticker-paid-message-item-renderer,
 yt-live-chat-ticker-paid-message-item-renderer *,
 yt-live-chat-ticker-sponsor-item-renderer,
@@ -223,37 +212,26 @@ yt-live-chat-ticker-sponsor-item-renderer * {
   font-family: "Baloo";
 }
 
-/* Sembunyikan Panel Aksi dan Reaksi */
-yt-live-chat-action-panel-renderer,
-yt-live-chat-renderer #action-panel {
+yt-live-chat-mode-change-message-renderer, 
+yt-live-chat-viewer-engagement-message-renderer, 
+yt-live-chat-restricted-participation-renderer {
   display: none !important;
 }
 
-/* Sembunyikan Panel Kontrol Reaksi */
+yt-live-chat-banner-manager {
+  display: none !important;
+}
+
+
+yt-live-chat-action-panel-renderer, 
+yt-live-chat-renderer #action-panel {
+  display: none !important;
+}
 yt-reaction-control-panel-overlay,
 yt-reaction-control-panel-overlay-view-model,
 yt-reaction-control-panel-view-model {
   display: none !important;
 }
-
-/* Sembunyikan Pesan Viewer Engagement */
 yt-live-chat-viewer-engagement-message-renderer {
   display: none !important;
-}
-
-/* Sembunyikan Banner Manager */
-yt-live-chat-banner-manager {
-  display: none !important;
-}
-
-/* Animasi Masuk untuk Pesan Teks */
-@keyframes anim {
-  0% { opacity: 0; transform: translateX(16px); }
-  100% { opacity: 1; transform: none; }
-}
-
-yt-live-chat-text-message-renderer,
-yt-live-chat-legacy-paid-message-renderer {
-  animation: anim 600ms;
-  animation-fill-mode: forwards;
 }
