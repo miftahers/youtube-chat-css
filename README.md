@@ -8,7 +8,7 @@ This repository is trying to explain basic youtube chat style manipulation only 
   3. Copy semua tulisan
   4. Tempel di OBS
 
-Anda dapat mengelompokkan bagian-bagian kode tersebut ke dalam beberapa kategori agar lebih mudah dimengerti. Berikut pengelompokan kode tersebut:
+## Anda dapat mengelompokkan bagian-bagian kode tersebut ke dalam beberapa kategori agar lebih mudah dimengerti. Berikut pengelompokan kode tersebut:
 
 **Pengaturan Font dan Latar Belakang:**
 ```css
